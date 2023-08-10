@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ <title>Search box using angluarJS</title>
+ <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+ <link rel="stylesheet"
+href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+ <link
+href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,700;0,800;1,400;1,500;
+1,700&display=swap" rel="stylesheet">
+ <style>
+body {
+ font-family: Arial;
+ width: 100%;
+ text-align: center;
+ background-color: #ff9900;
+}
+table {
+ border-collapse: collapse;
+ align-items: center;
+ margin-left: 570px;
+ margin-top: 50px;
+}
+td {
+ border: 1px solid black;
+ padding: 18px;
+}
+th {
+ border: 1px solid black;
+ padding: 5px;
+ text-align: left;
+}
+.nav {
+ overflow: hidden;
+ background-color: #ccff99;
+ text-align: center;
+ padding-bottom: 10px;
+ padding-top: 10px;
+ margin-bottom: 10px;
+ margin-top: 10px;
+}
+h2{
+ text-align: center;
+ margin-left: 100px;
+ font-weight: bold;
+}
+input[type="text"]{
+ width: 22%;
+ border:none;
+ border-bottom: .5px solid #000;
+ outline:none;
+ height:20px;
+ color:#000;
+ background-color: #ccc;
+ font-size: 15px;
+}
+span
+{
+align-self: center;
+ font-weight: bold;
+ font-size: 20px;
+}
+p{
+ font-weight: bold;
+ font-size: 30px;
+}
+ </style>
+ </head>
+ <body ng-app="myModule">
+ </div>
+ <div ng-controller="myController">
+  <span>SEARCH : </span>    
+ <input type="text" ng-model="searchbookdetails" placeholder="" />
+ <br />
+ <br />
+ <p>PRICE DETAILS</p>
+ <table>
+ <thead>
+ <tr>
+ <th>SNO</th>
+ <th style="text-align:center">SERVICE NAME</th>
+ <th>PRICE</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr ng-repeat="book in books| filter:searchbookdetails">
+ <td> {{ book.sno }} </td>
+ <td> {{ book.book_name }} </td>
+ <td> {{ book.publication }} </td>
+ </tr>
+ </tbody>
+ </table>
+ </div>
+ <script>
+ var app = angular
+ .module("myModule", [])
+ .controller("myController", function ($scope) {
+ var books = [
+ {
+ sno : 1,
+ book_name:"HAIR CUT" ,
+ 
+ publication: 300},
+{
+ sno : 2,
+ book_name:"BEARD TRIM" ,
+ 
+ publication:200 },
+{
+ sno : 3,
+ book_name:"HAIR STRAIGHTENING" ,
+ publication:3500 },
+{
+ sno : 4,
+ book_name: "HAIR COLORING",
+ publication:1500 },
+{
+ sno : 5,
+ book_name: "HEAD MASSAGE",
+ 
+ publication:400 },
+{
+ sno : 6,
+ book_name: "DANDRUFF REMOVING",
+ 
+ publication: 1200},
+{
+ sno : 7,
+ book_name:"HAIR SMOOTHENING" ,
+ publication: 4000},
+{
+ sno : 8,
+ book_name:"HAIR WASH" ,
+ publication:150},
+
+ ];
+ $scope.books = books;
+ });
+ </script>
+ </body>
+</html>

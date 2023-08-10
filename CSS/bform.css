@@ -1,0 +1,182 @@
+/* body {
+  width: 500px;
+  margin: 0 auto;
+  padding: 50px;
+  overflow: hidden;
+}
+.text {
+  color: aliceblue;
+  margin-top: 1px;
+}
+div.elem-group {
+  margin: 20px 0;
+}
+
+div.elem-group.inlined {
+  width: 49%;
+  display: inline-block;
+  float: left; 
+  margin-left: 1%;
+}
+
+label {
+  display: block;
+  font-family: 'Nanum Gothic';
+  padding-bottom: 10px;
+  font-size: 1.25em;
+}
+
+input,
+select,
+textarea {
+  border-radius: 2px;
+  border: 2px solid #777;
+  box-sizing: border-box;
+  font-size: 1.25em;
+  text-decoration-color: blue;
+  font-family: 'Nanum Gothic';
+  width: 100%;
+  padding: 10px;
+}
+
+div.elem-group.inlined input {
+  width: 95%;
+  display: inline-block;
+}
+
+textarea {
+  height: 250px;
+}
+
+hr {
+  border: 1px dotted #ccc;
+}
+
+btnn {
+  height: 50px;
+  background: orange;
+  border: none;
+  color: white;
+  padding-left: 80px;
+  font-size: 1.25em;
+  font-family: 'Nanum Gothic';
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  border: 2px solid black;
+}
+
+.form {
+  text-align: center;
+  padding: 20px;
+  width: 450px;
+  height: 570px;
+  transform: translate(0%,-5%);
+  background-color: #1F51FF;
+  border-radius: 10px;
+
+}
+.main{
+  width: 100%;
+  background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url(sloon.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+} */
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f5f5f5;
+  font-family: Arial, sans-serif;
+}
+
+.main {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.text {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.elem-group {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.elem-group label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #444;
+}
+
+.elem-group input[type="text"],
+.elem-group input[type="email"],
+.elem-group input[type="tel"],
+.elem-group select {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-bottom: 2px solid #d3d3d3;
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  color: #444;
+}
+
+.elem-group input[type="text"]:focus,
+.elem-group input[type="email"]:focus,
+.elem-group input[type="tel"]:focus,
+.elem-group select:focus {
+  outline: none;
+  border-bottom-color: #67c5ff;
+}
+
+.elem-group.inlined {
+  display: flex;
+  align-items: center;
+}
+
+.elem-group.inlined label {
+  margin-right: 20px;
+}
+
+button[type="submit"] {
+  display: block;
+  margin: 20px auto 0;
+  padding: 10px 20px;
+  background-color: #67c5ff;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+button[type="submit"]:hover {
+  background-color: #449dd1;
+}

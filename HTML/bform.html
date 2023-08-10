@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Salon Booking</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <link rel="stylesheet" href="bform.css" />
+  </head>
+  <body>
+    <div class="main">
+    <div class="text">
+    <h1><bold> Book Appointment</bold></style></h1>
+    </div>
+    <form action="bform.php" method="POST">
+
+        <div class="elem-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name"  pattern=[A-Z\sa-z]{3,20} required>
+        </div>
+
+        <div class="elem-group">
+          <label for="email">Your E-mail</label>
+          <input type="email" id="email" name="email"  required>
+        </div>
+
+        <div class="elem-group">
+          <label for="phone">Your Phone</label>
+          <input type="tel" id="phone" name="phone"  pattern=(\d{3})-?\s?(\d{3})-?\s?(\d{4}) required>
+        </div>
+
+        <div class="elem-group inlined">
+            <label for="checkout-date">Check-In Time</label>
+            <input type="datetime-local" id="checkout-date" name="checkin" required>
+          </div>
+
+        <div class="elem-group inlined">
+          <label for="checkout-date">Check-out Time</label>
+          <input type="datetime-local" id="checkout-date" name="checkout" required>
+        </div>
+
+        <div class="elem-group">
+          <select id="room-selection" name="shops" required>
+
+              <option value="Naturals">---CHOOSE A SHOP---</option>
+              <option value="Naturals">NATURALS</option>
+              <option value="L'Orange Spa">L'ORANGE SPA</option>
+               <option value="Chennai Salons">CHENNAI SALONS</option>
+                <option value="Tony & Guy">TONY & GUY</option>
+                 <option value="Chillbreeze Spa">CHILLBREEZE SPA</option>
+                  <option value="Green Trends">GREEN TRENDS</option>
+                  <option value="White Wings Salon">WHITE WINGS SALON</option>
+              <option value="Panache Salon">PANACHE SALON</option>
+          </select>
+
+        <div class="elem-group">
+          <select id="room-selection" name="services" required>
+
+            <option value="HAIR">---CHOOSE A SERVICE---</option>
+              <option value="Hair Cut">HAIR CUT</option>
+              <option value="Beard Trim">BEARD TRIM</option>
+               <option value="Hair Coloring">HAIR COLORING</option>
+                <option value="Head Massage">HEAD MASSAGE</option>
+                 <option value="Dandruff Removing">DANDRUFF REMOVING</option>
+                  <option value="Hair Smoothening">HAIR SMOOTHENING</option>
+                  <option value="Hair Straightening">HAIR STRAIGHTENING</option>
+              <option value="Hair spa">HAIR SPA</option>
+          </select>
+
+        </div>
+        <button type="submit"> BOOK NOW </button>
+      </form>
+    </div>
+</div>
+</div>
+  </body>
+</html>
